@@ -1,51 +1,40 @@
-body {
-    background: #6473e6;
-}
-.wrapper {
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
-}
 .slider {
+    width: 50%;
+    display: grid;
+    grid-template-areas: 
+    "a a a a a"
+    "b c d e f";
+}
+
+.meme-block {
     width: 100%;
-    background-color: #ddd;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+	opacity: 0;
+    grid-area: a;
 }
-.memblock {
-    display: flex;
-    flex-direction: column;
+.meme-block img {
+    width: 100%;
 }
-.slides img {
-    max-width: 100%;
-    height: auto;
+#meme1, .slider-label1 {
+    grid-area: b;
 }
-#meme1:checked ~ .slider > .meme1-block {
-    transition-property: opacity;
-    transition-duration: 1s;
-    overflow: hidden;
+#meme2, .slider-label2 {
+    grid-area: c;
 }
-#meme2:checked ~ .slider > .meme2-block {
-    transition-property: opacity;
-    transition-duration: 1s;
-    overflow: hidden;
+#meme3, .slider-label3 {
+    grid-area: d;
 }
-#meme3:checked ~ .slider > .meme3-block {
-    transition-property: opacity;
-    transition-duration: 1s;
+#meme4, .slider-label4 {
+    grid-area: e;
 }
-#meme4:checked ~ .slider > .meme4-block {
-
-    transition-property: opacity;
-    transition-duration: 1s;
-}
-#meme5:checked ~ .slider > .meme5-block {
-
-    transition-property: opacity;
-    transition-duration: 1s;
+#meme5, .slider-label5 {
+    grid-area: f;
 }
 
+.slider-check:checked + .slider-label + .meme-block {
+    display: block;
+    opacity: 1;
+}
+
+.slider-check:checked + .slider-label {
+	background:#C00;
+}
