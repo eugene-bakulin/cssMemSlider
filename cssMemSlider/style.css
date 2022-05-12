@@ -1,0 +1,51 @@
+body {
+    background: #6473e6;
+}
+.wrapper {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+}
+.slider {
+    width: 100%;
+    background-color: #ddd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.memblock {
+    display: flex;
+    flex-direction: column;
+}
+.slides img {
+    max-width: 100%;
+    height: auto;
+}
+#meme1:checked ~ .slider > .meme1-block {
+    transition-property: opacity;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+#meme2:checked ~ .slider > .meme2-block {
+    transition-property: opacity;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+#meme3:checked ~ .slider > .meme3-block {
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+#meme4:checked ~ .slider > .meme4-block {
+
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+#meme5:checked ~ .slider > .meme5-block {
+
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
