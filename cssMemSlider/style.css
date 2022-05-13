@@ -23,7 +23,6 @@ body {
     justify-content: center;
     
 }
-
 .slider p {
     justify-self: flex-start;
     font-family: 'Roboto', sans-serif;
@@ -32,12 +31,27 @@ body {
 }
 .slider-check {
     justify-self: center;
-    align-self: center;
+    align-self: center; 
+    box-shadow: 0 0 0 0.1em #d5e0ef;
+    width: 0.6em;
+    height: 0.6em;
+    appearance: none;
+    border-radius: 50%;
+    transition: all ease-in 0.2s;
+}
+.slider-check:hover {
+    background-color: black;
+}
+.slider-label:hover {
+    cursor: pointer;
+}
+.slider-label:hover ~ .slider-check:checked {
+    background-color: black;
+}
+.slider-label:active ~ .slider-check {
+    background-color: rgb(36, 150, 52);
 }
 .meme-block {
-
-    
-    
     width: 100%;
 	opacity: 0;
     grid-area: a;
@@ -50,7 +64,7 @@ body {
     width: 90%;
 }
 .txt {
-    
+    align-self: center;
     margin: 0 0 0 2em;
     opacity: 0;
     grid-area: b;
@@ -86,7 +100,6 @@ body {
     transition-duration: 1.5s;
 }
 .slider-check:checked + .slider-label {
-    background-size: 2px;
-	background-color:#C00;
-    border-radius: 2em;
+	background-color:rgb(36, 150, 52);
+    border-radius: 50%;
 }
