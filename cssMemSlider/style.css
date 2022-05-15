@@ -61,7 +61,7 @@ body {
 .meme-block img {
     box-shadow: 0 0 2em rgba(0, 0, 0, .5);
     border-radius: 1%;
-    width: 90%;
+    max-width: 90%;
 }
 .txt {
     align-self: center;
@@ -102,4 +102,23 @@ body {
 .slider-check:checked + .slider-label {
 	background-color:rgb(36, 150, 52);
     border-radius: 50%;
+}
+@media screen and (max-width: 839.98px) {
+    .slider {
+        width: 100%;
+        margin-top: 0;
+        grid-template-areas:
+            "n n n n n n n n"
+            "a a a a a a a a"
+            "x x x x x x x x"
+            "l c d e f g h z"
+            "m m m m m m m m"
+            "b b b b b b b b"           
+            "j j j j j j j j";
+        grid-template-rows: 2em 2fr 1em 2em 1em 2em 1em;
+        grid-template-columns: 1fr 2em 2em 2em 2em 2em 2em 1fr;
+    }
+    .slider p {
+        font-size: 0.8em;
+    }
 }
