@@ -1,5 +1,5 @@
 body {
-    min-height: 90vh;
+    min-height: 100vh;
     margin: 0;
     background-image: url("../cssMemSlider/assets/memememe.jpg");
     background-size: cover;
@@ -11,19 +11,16 @@ body {
     background: linear-gradient(-45deg, rgba(120, 20, 112, 1), rgba(36, 150, 52, 1));
    
     width: 50vw;
-    height: 90vh;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 1em;
     margin-left: 25vw;
     margin-right: 25vw;
     display: grid;
     grid-template-areas:
-    
+    "m m m m m m m m"
     "a a a a a a a a"
-    
     "b c d e f g h l"
     "j j j j j j j j";
-    grid-template-rows: 2fr 1.5em 4em;
+    grid-template-rows: 1.5em 2fr 1.5em 4em;
     grid-template-columns: 6fr 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 4em;
     justify-content: center;
     
@@ -66,7 +63,7 @@ body {
 .meme-block img {
     box-shadow: 0 0 2em rgba(0, 0, 0, .5);
     border-radius: 1%;
-    max-width: 90%;
+    max-width: 75%;
 }
 .txt {
     align-self: center;
@@ -110,44 +107,37 @@ body {
 }
 
 @media screen and (max-width: 839.98px) {
-    body {
-        min-height: 96vh;
-    }
+
     .slider {
         width: 70vw;
-        height: 96vh;
-        margin-top: 2vh;
-        margin-bottom: 2vh;
+
         margin-left: 15vw;
         margin-right: 15vw;
         grid-template-areas:
-            "a a a a a a a a"
             "x x x x x x x x"
+            "a a a a a a a a"
             "l c d e f g h z"
             "m m m m m m m m"
             "b b b b b b b b"           
             "j j j j j j j j";
-        grid-template-rows: 1fr 1em 2em 1em 2em 1em;
+        grid-template-rows: 1.5em 1fr 2em 1em 1em 1em;
         grid-template-columns: 1fr 2em 2em 2em 2em 2em 2em 1fr;
     }
     .meme-block img {
-        max-width: 85%;
+        max-width: 80%;
     }
 }
 
-@media screen and (max-width: 399.98px) {
-    body {
-        min-height: 98vh;
-    }
+@media screen and (max-width: 320px) {
+
     .slider {
-        width: 96vw;
-        height: 98vh;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-        margin-left: 2vw;
-        margin-right: 2vw;
+        width: 90vw;
+
+
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
     .meme-block img {
-        max-width: 90%;
+        width: 90%;
     }
 }
