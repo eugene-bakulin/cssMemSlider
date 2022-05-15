@@ -9,7 +9,6 @@ body {
     box-shadow: 0 0 2em rgba(0, 0, 0, .5);
     border-radius: 1%;
     background: linear-gradient(-45deg, rgba(120, 20, 112, 1), rgba(36, 150, 52, 1));
-   
     width: 50vw;
     margin-top: 1em;
     margin-left: 25vw;
@@ -22,8 +21,7 @@ body {
     "j j j j j j j j";
     grid-template-rows: 1.5em 2fr 1.5em 4em;
     grid-template-columns: 6fr 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 4em;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 .slider p {
     justify-self: flex-start;
@@ -107,10 +105,8 @@ body {
 }
 
 @media screen and (max-width: 839.98px) {
-
     .slider {
         width: 70vw;
-
         margin-left: 15vw;
         margin-right: 15vw;
         grid-template-areas:
@@ -129,11 +125,8 @@ body {
 }
 
 @media screen and (max-width: 320px) {
-
     .slider {
         width: 90vw;
-
-
         margin-left: 5vw;
         margin-right: 5vw;
     }
