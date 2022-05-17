@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+}
+.wrapper {
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("../cssMemSlider/assets/memememe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    box-shadow: 0 0 2em rgba(0, 0, 0, .5);
+    border-radius: 1%;
+    background: linear-gradient(-45deg, rgba(120, 20, 112, 1), rgba(36, 150, 52, 1));
+    width: 50%;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+    "m m m m m m m m"
+    "a a a a a a a a"
+    "z z z z z z z z"
+    "b c d e f g h l"
+    "j j j j j j j j";
+    grid-template-rows: 1.5em 1fr 1em 1.5em 2em;
+    grid-template-columns: 1fr 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 2em;
+    justify-content: center; 
+}
+.slider p {
+    justify-self: flex-start;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(192, 192, 192);
+    font-weight: bold;
+}
+.slider-check {
+    justify-self: center;
+    align-self: center; 
+    box-shadow: 0 0 0 0.1em #d5e0ef;
+    width: 0.6em;
+    height: 0.6em;
+    appearance: none;
+    border-radius: 50%;
+    transition: all ease-in 0.2s;
+}
+
+@-webkit-keyframes sliding { from { transform: translateX(100%); } to { transform: translateX(0);}  }
+   @-moz-keyframes sliding { from { transform: translateX(100%); } to { transform: translateX(0);}  }
+     @-o-keyframes sliding { from { transform: translateX(100%); } to { transform: translateX(0);}  }
+        @keyframes sliding { from { transform: translateX(100%); } to { transform: translateX(0);}  }
+
+.slider-check:hover {
+    background-color: black;
+}
+.slider-label:hover {
+    cursor: pointer;
+}
+.slider-label:hover ~ .slider-check:checked {
+    background-color: black;
+}
+.slider-label:active {
+    border: 0.1em solid aliceblue;
+    background-color:rgb(36, 150, 52);
+    border-radius: 50%;
+}
+.meme-block {
+    width: 100%;
+	opacity: 0;
+    grid-area: a;
+    align-self: center;
+    text-align: center;
+}
+.meme-block img {
+    box-shadow: 0 0 2em rgba(0, 0, 0, .5);
+    border-radius: 1%;
+    max-width: 70%;
+}
+.txt {
+    align-self: center;
+    margin: 0 0 0 2em;
+    opacity: 0;
+    grid-area: b;
+}
+#meme1, .slider-label1 {
+    grid-area: c;
+}
+#meme2, .slider-label2 {
+    grid-area: d;
+}
+#meme3, .slider-label3 {
+    grid-area: e;
+}
+#meme4, .slider-label4 {
+    grid-area: f;
+}
+#meme5, .slider-label5 {
+    grid-area: g;
+}
+#meme6, .slider-label6 {
+    grid-area: h;
+}
+
+.slider-check:checked + .slider-label + .meme-block {
+    display: block;
+    opacity: 1;
+    animation-name: sliding;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+.slider-check:checked + .slider-label + .meme-block + .txt {
+    opacity: 1;
+    animation-name: sliding;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    transition-property: opacity;
+    transition-duration: 2.5s;
+}
+.slider-check:checked + .slider-label {
+	background-color:rgb(36, 150, 52);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 739.98px) {
+    .slider {
+        width: 95%;
+        grid-template-areas:
+            "x x x x x x x x"
+            "a a a a a a a a"
+            "v v v v v v v v"
+            "l c d e f g h z"
+            "m m m m m m m m"
+            "b b b b b b b b"           
+            "j j j j j j j j";
+        grid-template-rows: 1.5em 1fr 1em 2em 1em 1em 2em;
+        grid-template-columns: 1fr 2em 2em 2em 2em 2em 2em 1fr;
+    }
+    .meme-block img {
+        max-width: 75%;
+    }
+    .txt {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
